@@ -12,6 +12,7 @@ import ErrorPage from '@/views/404';
 const CompUseRef = lazy(() => import('@/usage-hooks/useRef'));
 const CompUseReducer = lazy(() => import('@/usage-hooks/useReducer'));
 const CompUseContext = lazy(() => import('@/usage-hooks/useContext'));
+const CompValtio = lazy(() => import('@/views/valtio-demo'));
 
 export const routes = [
   {
@@ -51,6 +52,15 @@ export const routes = [
     element: (
       <Suspense>
         <CompUseContext />
+      </Suspense>
+    )
+  },
+  {
+    path: '/valtio-demo',
+    name: 'valtio-demo',
+    element: (
+      <Suspense>
+        <CompValtio />
       </Suspense>
     )
   },

@@ -14,7 +14,8 @@
     "@quarkd/quark-react": "^1.5.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "valtio": "^1.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
