@@ -11,6 +11,7 @@ import ErrorPage from '@/views/404';
 
 const CompUseRef = lazy(() => import('@/usage-hooks/useRef'));
 const CompUseReducer = lazy(() => import('@/usage-hooks/useReducer'));
+const CompUseContext = lazy(() => import('@/usage-hooks/useContext'));
 
 export const routes = [
   {
@@ -41,6 +42,15 @@ export const routes = [
     element: (
       <Suspense>
         <CompUseReducer />
+      </Suspense>
+    )
+  },
+  {
+    path: '/useContext',
+    name: 'useContext',
+    element: (
+      <Suspense>
+        <CompUseContext />
       </Suspense>
     )
   },
