@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.about {
+  background-color: wheat;
+}
+
+.nav-active {
+  color: coral;
+  font-weight: 600;
+}
+
+.count-btn {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #c6c5b9;
+}
