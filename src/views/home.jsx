@@ -14,6 +14,13 @@ export default function Home() {
     console.log('=====effect');
   }, [title]);
   const changeTitle = title => setTitle(title);
+
+  const [myClassNames, setMyClassNames] = useState('');
+  const [clsName, setClsName] = useState('');
+  const confirm = () => {
+    setMyClassNames(['dd', 'de']);
+  };
+
   return (
     <div>
       count:{count}
@@ -23,6 +30,16 @@ export default function Home() {
         </Button>
       </div>
       <About ref={aboutRef} title={title} changeTitle={changeTitle} />
+      <hr />
+      <h2 className={myClassNames}>classnames</h2>
+      <input
+        type='text'
+        value={clsName}
+        onInput={e => setClsName(e.target.value)}
+      />
+      <span className='count-btn' onClick={confirm}>
+        确认
+      </span>
     </div>
   );
 }

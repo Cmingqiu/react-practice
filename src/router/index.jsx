@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
 import Home from '@/views/home';
@@ -24,11 +24,7 @@ export const routes = [
   {
     path: '/useRef',
     name: 'useRef',
-    element: (
-      <Suspense fallback={<div>loading...</div>}>
-        <CompUseRef /> {/* 必须以组件形式调用？？？ {CompUseRef} */}
-      </Suspense>
-    )
+    element: <CompUseRef /> /* 必须以组件形式调用？？？ {CompUseRef} */
   },
   {
     path: '/useImpera',
@@ -41,38 +37,22 @@ export const routes = [
   {
     path: '/useReducer',
     name: 'useReducer',
-    element: (
-      <Suspense>
-        <CompUseReducer />
-      </Suspense>
-    )
+    element: <CompUseReducer />
   },
   {
     path: '/useContext',
     name: 'useContext',
-    element: (
-      <Suspense>
-        <CompUseContext />
-      </Suspense>
-    )
+    element: <CompUseContext />
   },
   {
     path: '/valtio-demo',
     name: 'valtio-demo',
-    element: (
-      <Suspense>
-        <CompValtio />
-      </Suspense>
-    )
+    element: <CompValtio />
   },
   {
     path: '/redux-demo',
     name: 'redux-demo',
-    element: (
-      <Suspense>
-        <CompRedux />
-      </Suspense>
-    )
+    element: <CompRedux />
   },
   { path: '*', element: <ErrorPage /> }
 ];

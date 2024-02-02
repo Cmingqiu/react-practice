@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, Suspense } from 'react';
 import { NavLink, useRoutes } from 'react-router-dom';
 import { routes } from '@/router';
 
@@ -22,7 +22,7 @@ function App() {
       <br />
       <hr />
       <br />
-      {GetRoutes}
+      <Suspense fallback='Loading...'> {GetRoutes}</Suspense>
     </>
   );
 }
