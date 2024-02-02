@@ -4,3 +4,4 @@
 2. react-router-dom@6.21.3
 3. webpack
 4. valtio
+5. @reduxjs/toolkit

@@ -1,3 +1,10 @@
+import { useInfoStore } from '../store';
+
 export default function ErrorPage() {
-  return <h1>404</h1>;
+  const infoStoreProxy = useInfoStore();
+  return (
+    <>
+      <h1>404</h1>; infoStoreProxy:{infoStoreProxy.count}
+    </>
+  );
 }

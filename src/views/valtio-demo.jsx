@@ -11,7 +11,7 @@ export default function () {
         className='count-btn'
         onClick={infoStoreProxy.changeCount.bind(
           null,
-          Math.round(Math.random() * 10)
+          Math.random().toFixed(3)
         )}>
         change
       </span>

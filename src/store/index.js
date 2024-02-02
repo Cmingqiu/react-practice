@@ -5,6 +5,7 @@ export const infoStore = proxy({
   list: [],
   // action
   changeCount(v) {
+    console.log('---', v);
     infoStore.count = v;
   }
 });

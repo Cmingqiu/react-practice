@@ -13,6 +13,7 @@ const CompUseRef = lazy(() => import('@/usage-hooks/useRef'));
 const CompUseReducer = lazy(() => import('@/usage-hooks/useReducer'));
 const CompUseContext = lazy(() => import('@/usage-hooks/useContext'));
 const CompValtio = lazy(() => import('@/views/valtio-demo'));
+const CompRedux = lazy(() => import('@/views/redux-demo'));
 
 export const routes = [
   {
@@ -61,6 +62,15 @@ export const routes = [
     element: (
       <Suspense>
         <CompValtio />
+      </Suspense>
+    )
+  },
+  {
+    path: '/redux-demo',
+    name: 'redux-demo',
+    element: (
+      <Suspense>
+        <CompRedux />
       </Suspense>
     )
   },
