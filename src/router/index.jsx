@@ -14,6 +14,7 @@ const CompUseReducer = lazy(() => import('@/usage-hooks/useReducer'));
 const CompUseContext = lazy(() => import('@/usage-hooks/useContext'));
 const CompValtio = lazy(() => import('@/views/valtio-demo'));
 const CompRedux = lazy(() => import('@/views/redux-demo'));
+const CompUseState = lazy(() => import('@/usage-hooks/useState'));
 
 export const routes = [
   {
@@ -21,6 +22,7 @@ export const routes = [
     element: <Navigate to='/home' /> //根目录自动渲染home页面
   },
   { path: '/home', name: '首页', element: <Home /> },
+  { path: '/useState', name: 'useState', element: <CompUseState /> },
   {
     path: '/useRef',
     name: 'useRef',
