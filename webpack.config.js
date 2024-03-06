@@ -23,14 +23,15 @@ module.exports = {
         test: /.css$/,
         use: [
           'style-loader',
-          {
+          'css-loader'
+          /* {    // 使用css module
             loader: 'css-loader',
             options: {
               modules: {
                 localIdentName: '[local]_[hash:5]'
               }
             }
-          }
+          } */
         ]
       }
     ]

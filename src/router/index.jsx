@@ -16,6 +16,7 @@ const CompValtio = lazy(() => import('@/views/valtio-demo'));
 const CompRedux = lazy(() => import('@/views/redux-demo'));
 const CompUseState = lazy(() => import('@/usage-hooks/useState'));
 const CompSyncCallback = lazy(() => import('@/views/useSyncCallback'));
+const ClassComponent = lazy(() => import('@/views/classComponent'));
 
 export const routes = [
   {
@@ -61,6 +62,11 @@ export const routes = [
     path: '/synCallback',
     name: 'synCallback',
     element: <CompSyncCallback />
+  },
+  {
+    path: '/classComponent',
+    name: 'classComponent',
+    element: <ClassComponent />
   },
   { path: '*', element: <ErrorPage /> }
 ];
