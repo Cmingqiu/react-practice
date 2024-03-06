@@ -3,35 +3,44 @@ import React, { Component } from 'react';
 class Comp extends Component {
   constructor(props) {
     super(props);
+    console.log('constructor');
     this.state = {
-      name: 'class'
+      name: 'class',
+      age: 10
     };
+    // this.change = this.change.bind(this);
   }
-  /*  componentWillMount() {
+  /* componentWillMount() {
     console.log('componentWillMount');
   } */
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate');
     return true;
   }
-  componentDidMount() {
-    console.log('componentDidMount');
+  // componentWillUpdate
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
   }
   componentWillUnmount() {
     console.log('componentWillUnmount');
   }
-  change() {
-    console.log('>>> ', this);
+  // componentWillReceiveProps
+  change = () => {
+    console.log('>>>render ', this);
     this.setState({
-      name: 'ccc'
+      ...this.state,
+      age: this.state.age + 1
     });
-  }
+  };
   render() {
     console.log('render', this);
     return (
       <>
-        <h1>{this.state.name}</h1>
-        <button onClick={e => this.change()}>change</button>
+        <h1>{JSON.stringify(this.state)}</h1>
+        <button onClick={this.change}>change</button>
       </>
     );
   }

@@ -6,3 +6,4 @@
 4. valtio
 5. @reduxjs/toolkit 、redux-persist
 6. css module
+7. tailwind

@@ -17,6 +17,7 @@ const CompRedux = lazy(() => import('@/views/redux-demo'));
 const CompUseState = lazy(() => import('@/usage-hooks/useState'));
 const CompSyncCallback = lazy(() => import('@/views/useSyncCallback'));
 const ClassComponent = lazy(() => import('@/views/classComponent'));
+const CompTailwind = lazy(() => import('@/views/tailwind'));
 
 export const routes = [
   {
@@ -67,6 +68,11 @@ export const routes = [
     path: '/classComponent',
     name: 'classComponent',
     element: <ClassComponent />
+  },
+  {
+    path: '/tailwind',
+    name: 'tailwind',
+    element: <CompTailwind />
   },
   { path: '*', element: <ErrorPage /> }
 ];

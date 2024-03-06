@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import './style.css';
+import '@/styles';
 /* router */
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 /* store */

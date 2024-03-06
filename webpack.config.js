@@ -23,7 +23,8 @@ module.exports = {
         test: /.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'postcss-loader'
           /* {    // 使用css module
             loader: 'css-loader',
             options: {
