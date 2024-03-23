@@ -43,6 +43,14 @@ export default function () {
         onClick={change}>
         暗黑模式
       </div>
+
+      <hr />
+
+      <div className='[color:red] hover:text- m-4 columns-3'>
+        {' '}
+        This is a bunch of text split into three columns using the CSS `columns`
+        property. The text is equally distributed over the columns.
+      </div>
     </>
   );
 }
