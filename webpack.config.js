@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UnoCss = require('@unocss/webpack').default;
 
 const path = require('path');
 const resolve = file => path.resolve(__dirname, file);
@@ -46,6 +47,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: resolve('index.html')
-    })
+    }),
+    UnoCss()
   ]
 };
